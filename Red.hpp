@@ -10,4 +10,5 @@ class Red{
 		void crear(PC*);
 		void ver();
 		void ingresarPC(int i);
+		~Red();
 };

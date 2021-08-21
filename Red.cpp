@@ -31,10 +31,10 @@ void Red::ingresarPC(int b) {
 	    <<"Instrucciones: Despues del'#' ingrese el comando\n ";
 	do {
 		cout<<aux->getHOST()<<"#";
-		if(r==0){
-		cin.ignore();
-		r++;
-	}
+		if(r==0) {
+			cin.ignore();
+			r++;
+		}
 		getline(cin,respuesta);
 		if(respuesta=="show") {
 			aux->show();
@@ -96,4 +96,12 @@ void Red::ingresarPC(int b) {
 
 		}
 	} while(respuesta!="salida");
+}
+
+Red::~Red() {
+	for(int i = 0; i < redes.size(); i++) {
+		if(redes[i] != NULL) {
+			delete redes[i];
+		}
+	}
 }

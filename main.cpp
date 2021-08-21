@@ -53,7 +53,9 @@ int main() {
 		}//Fin del switch.
 		cout << "\n";
 	} while (opcion != 3);
+	r->~Red();
 		return 0;
+		
 }//fin del main
 
 int MENU() {
